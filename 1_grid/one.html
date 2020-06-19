@@ -3,7 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="one.css">
-    <title>Nav One</title>
+<!--    <title>Nav One</title>-->
+    <style>
+        @charset "UTF-8";
+        @media screen {
+            body {
+                font-family: 'Lato', sans-serif;
+                margin: 0;
+                padding: 0;
+            }
+            #levelFirst {
+                display: grid;
+                grid-template-columns: 1fr 1fr 1fr;
+                background-color: #eee;
+                padding: 10px;
+                grid-gap: 10px;
+            }
+            .levelFirstElement {
+                background-color: pink;
+                border: 1px solid rgba(0, 0, 0, 0.8);
+                padding: 20px;
+                font-size: 30px;
+                text-align: center;
+            }
+            .elementActive {
+                background-color: #2196F3;
+            }
+        }
+    </style>
 </head>
 <body>
     <script>
