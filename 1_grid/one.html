@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="one.css">
+    <title>Nav One</title>
+</head>
+<body>
+    <script>
+        // FileMaker will replace the pagename dynamically
+        let pagename = 'Kunden';
+    </script>
+    <div id="levelFirst">
+        <div id="Kunden" class="levelFirstElement">
+            first
+        </div>
+        <div id="Aufträge" class="levelFirstElement">
+            second
+        </div>
+        <div id="Admin" class="levelFirstElement">
+            third
+        </div>
+    </div>
+    <script>
+        function markActive(pagename) {
+            let activeElement = document.getElementById(pagename);
+            activeElement.classList.add('elementActive');
+        }
+        markActive(pagename);
+    </script>
+</body>
+</html>
