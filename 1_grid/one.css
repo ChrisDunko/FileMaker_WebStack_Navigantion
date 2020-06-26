@@ -5,20 +5,35 @@
     margin: 0;
     padding: 0;
   }
-  #levelFirst {
+
+  .levelDiv {
+    max-width: 600px;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    background-color: #eee;
-    padding: 10px;
     grid-gap: 10px;
+    background-color: #eee;
+  }
+  .levelElement {
+    text-align: center;
+    border: 1px solid rgba(0, 0, 0, 0.8);
+    padding: 20px;
+  }
+
+  #levelFirst {
+    grid-template-columns: 1fr 1fr 1fr;
+    padding: 10px;
   }
   .levelFirstElement {
     background-color: pink;
-    border: 1px solid rgba(0, 0, 0, 0.8);
-    padding: 20px;
-    font-size: 30px;
-    text-align: center;
   }
+
+  #levelSecond {
+    grid-template-columns: 1fr 1fr 1fr;
+    padding: 10px;
+  }
+  .levelSecondElement {
+    background-color: lightblue;
+  }
+
   .elementActive {
     background-color: #2196F3;
   }
