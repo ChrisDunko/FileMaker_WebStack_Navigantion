@@ -24,13 +24,13 @@
         </div>
     </div>
     <div id="levelSecond" class="levelDiv">
-        <div id="Kunden" class="levelElement levelSecondElement">
+        <div id="Kunden" class="levelElement levelSecondElement" onclick="callNavigation('layout1')" >
             Aufträge
         </div>
-        <div id="Aufträge" class="levelElement levelSecondElement">
+        <div id="Aufträge" class="levelElement levelSecondElement" onclick="callNavigation('layout2')">
             Lieferscheine
         </div>
-        <div id="Admin" class="levelElement levelSecondElement">
+        <div id="Admin" class="levelElement levelSecondElement" onclick="callNavigation('layout3')">
             Rechnungen
         </div>
     </div>
@@ -40,6 +40,9 @@
             activeElement.classList.add('elementActive');
         }
         markActive(pagename);
+        function callNavigation(layoutName) {
+            FileMaker.PerformScript("Navigation", layoutName);
+        }
     </script>
 </body>
 </html>
