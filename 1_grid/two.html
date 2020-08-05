@@ -40,9 +40,20 @@
             let activeElement = document.getElementById(pagename);
             activeElement.classList.add('elementActive');
         }
+        function markNotActive(pagename) {
+            let notActiveElement = document.getElementById(pagename);
+            notActiveElement.classList.remove('elementActive');
+        }
         markActive(pagename);
         function callNavigation(layoutName) {
-            FileMaker.PerformScript("Navigation_callback", pagename);
+            FileMaker.PerformScript("callback_for_fake", layoutName);
+            fakeNavigation(layoutName);
+        }
+        function fakeNavigation(layoutName) {
+            markNotActive('layout1');
+            markNotActive('layout2');
+            markNotActive('layout3');
+            markActive(layoutName);
         }
     </script>
 </body>
