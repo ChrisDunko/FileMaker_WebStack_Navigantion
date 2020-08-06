@@ -1,5 +1,9 @@
 @charset "UTF-8";
 @media screen {
+  root {
+    background: none;
+  }
+
   body {
     font-family: 'Lato', sans-serif;
     margin: 0;

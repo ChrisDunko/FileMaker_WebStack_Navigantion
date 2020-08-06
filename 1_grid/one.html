@@ -2,9 +2,10 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-        <link rel="stylesheet" href="one.css">
+        <link rel="stylesheet" href="one.css"> <!-- for dev outside FileMaker only -->
     <style>
         /* place content of css file before deployment to FileMaker */
+        /*<<css>>*/
     </style>
 </head>
 <body>
@@ -35,15 +36,10 @@
             Rechnungen
         </div>
     </div>
+
+    <script src="one.js"></script> <!-- for dev outside FileMaker only -->
     <script>
-        function markActive(pagename) {
-            let activeElement = document.getElementById(pagename);
-            activeElement.classList.add('elementActive');
-        }
-        markActive(pagename);
-        function callNavigation(layoutName) {
-            FileMaker.PerformScript("Navigation_callback", pagename);
-        }
+        /*<<js>>*/
     </script>
 </body>
 </html>
